@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Checkbox from "./Checkbox";
 import From from "./Form";
 import TextField from "./TextFiled";
@@ -8,8 +9,10 @@ const SignupForm = () => {
             <h1>Create an account</h1>
 
             <From>
-                <TextField />
-                <Checkbox />
+                <TextField label="Your email address" />
+                <Checkbox label="I read and agree with Terms and Conditions" />
+
+                <Button>Create Account</Button>
             </From>
         </div>
     );
