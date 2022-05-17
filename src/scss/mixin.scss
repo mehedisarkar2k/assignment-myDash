@@ -1,0 +1,23 @@
+$primary-color: #38aafe;
+$dark-color: #24344d;
+$white-color: #fff;
+$gray-color: #a3aab5;
+
+// mixin for mobile first
+@mixin mobile {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (max-width: 1199px) {
+        @content;
+    }
+}
