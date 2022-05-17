@@ -76,6 +76,9 @@ const SignupForm = () => {
 
         console.log(data);
         setShowModal(true);
+        setData(initialValue);
+        setError(null);
+        setErrorMessage("");
     };
 
     return (
@@ -133,7 +136,7 @@ const SignupForm = () => {
                     <Checkbox
                         name="toc"
                         label="I read and agree with Terms and Conditions"
-                        value={data.toc}
+                        checked={data.toc}
                         onChange={handleChange}
                         error={error?.toc}
                     />

@@ -4,7 +4,7 @@ const SuccessModal = ({ handleModal }) => {
     return (
         <Modal>
             <div className="">
-                <p>Success</p>
+                <p>Account created successfully!</p>
 
                 <button className="button" onClick={() => handleModal(false)}>
                     Close
