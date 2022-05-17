@@ -7,3 +7,49 @@
         box-shadow: 0 0 5px 0 red !important;
     }
 }
+
+.button {
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    background: lighten($color: #24344d, $amount: 25%);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        background: lighten($color: #24344d, $amount: 15%);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    .modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: rgba($color: #24344d, $alpha: 0.9);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .modal__content {
+            background: #24344d;
+            padding: 20px 30px;
+            min-height: 100px;
+            min-width: 300px;
+            color: #fff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
