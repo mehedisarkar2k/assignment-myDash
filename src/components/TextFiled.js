@@ -5,12 +5,17 @@ const TextField = ({
     label = "Name",
     placeholder,
     type = "text",
+    error,
+    message,
     ...rest
 }) => {
     return (
-        <div className={styles.textField}>
+        <div
+            className={`${styles.textField} ${error || message ? "error" : ""}`}
+        >
             <label className={styles.textField__label} htmlFor={id}>
-                {label}
+                {message ? message : label}
+                {(error || message) && <sup>*</sup>}
             </label>
             <input
                 className={styles.textField__input}
