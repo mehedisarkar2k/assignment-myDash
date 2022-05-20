@@ -1,23 +1,15 @@
-import styles from "./App.module.scss";
-import SignupForm from "./components/SignupForm";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Chart from "./components/Chart";
+import Signup from "./pages/Signup";
 
 function App() {
     return (
-        <div className={styles.container}>
-            <div className={styles.container__content}>
-                <div className={styles.container__content__leftBox}>
-                    <div className={styles.container__content__leftBox__text}>
-                        <h2>Choose a date range</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Ipsum, quasi nihil?
-                        </p>
-                    </div>
-                </div>
-
-                <SignupForm />
-            </div>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Signup />} />
+                <Route path="/account" element={<Chart />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 

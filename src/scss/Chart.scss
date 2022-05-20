@@ -1,0 +1,49 @@
+@use "./mixin.scss" as mixin;
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    .container {
+        width: 500px;
+        height: 400px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .bar {
+        fill: mixin.$primary-color;
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        border: 1px solid mixin.$primary-color;
+        border-radius: 5px;
+        padding: 10px;
+        outline: none;
+        transition: all 0.2s;
+        cursor: pointer;
+        background-color: mixin.$primary-color;
+        color: mixin.$white-color;
+        margin: 15px 0;
+        min-width: 250px;
+
+        &:focus {
+            border: 1px solid mixin.$primary-color;
+            box-shadow: 0 0 5px 0 mixin.$primary-color;
+        }
+
+        &:hover {
+            background-color: lighten(
+                $color: mixin.$primary-color,
+                $amount: 10%
+            );
+        }
+    }
+}
