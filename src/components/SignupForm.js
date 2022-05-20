@@ -5,6 +5,7 @@ import Checkbox from "./Checkbox";
 import From from "./Form";
 import TextField from "./TextFiled";
 import SuccessModal from "../components/SuccessModal";
+import { useNavigate } from "react-router-dom";
 
 const initialValue = {
     email: "",
@@ -20,6 +21,7 @@ const SignupForm = () => {
     const [error, setError] = useState(null);
     const [errorMessage, setErrorMessage] = useState("");
     const [showModal, setShowModal] = useState(false);
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value, checked } = e.target;
@@ -79,6 +81,7 @@ const SignupForm = () => {
         setData(initialValue);
         setError(null);
         setErrorMessage("");
+        navigate("account");
     };
 
     return (

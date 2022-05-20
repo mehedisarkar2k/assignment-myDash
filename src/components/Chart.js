@@ -25,6 +25,10 @@ const Chart = () => {
                 name: "D",
                 value: getRandom(10, 50),
             },
+            {
+                name: "E",
+                value: getRandom(10, 50),
+            },
         ];
 
         makeChart(d3, data);
